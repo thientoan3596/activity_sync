@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "tsc && node ./dist/main.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
