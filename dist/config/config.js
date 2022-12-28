@@ -1,8 +1,9 @@
 export class Configuration {
-    name = "";
+    primaryFile = "activity_sheet.xlsx";
+    auxFile = "downloaded.xlsx";
+    exportFile = "final.xlsx";
     static INSTANCE;
     constructor() {
-        this.name = "hallo";
     }
     static getInstance() {
         if (!Configuration.INSTANCE) {
