@@ -21,16 +21,26 @@ export class Configuration {
 
 export class State {
     filesState: {
-        pri: FileState,
-        aux: FileState,
-        fin: FileState,
+        input: {
+            pri: FileState,
+            aux: FileState,
+        },
+        output: {
+            fin: FileState,
+        }
     }
     private static INSTANCE: State;
     private constructor() {
         this.filesState = {
-            aux: "Unloaded",
-            pri: "Unloaded",
-            fin: "Unloaded"
+            input: {
+                aux: "Unloaded",
+                pri: "Unloaded",
+
+            },
+            output: {
+
+                fin: "Unloaded"
+            }
         }
         // this.fileState.aux = "Unloaded";
         // this.fileState.pri = "Unloaded";

@@ -58,7 +58,7 @@ export function ParseCSVToTicket_V3(filePath, ticketHolder) {
 export function TicketsMerger(aux, pri) {
     let type = getTicketsType(aux);
     let fin = {
-        type: "UNDEFINED",
+        type: pri.type,
         name: "fin",
         event: new events.EventEmitter(),
         value: {
@@ -96,4 +96,10 @@ function getTicketsType(tickets) {
             type = "SCTASK";
     }
     return type;
+}
+function mergeTicketSync(ori, sec) {
+    Object.keys(ori.value.data).forEach((t) => {
+        // ori.value.data[t] = 
+    });
+    return null;
 }

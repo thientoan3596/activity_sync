@@ -56,17 +56,31 @@ export function ParseCSVToTicket_V3(filePath: string, ticketHolder: TicketsObj) 
     } else
         throw new Error("Re-use <TicketsObj> variable");
 }
-export function TicketsMerger(aux: TicketsObj, pri: TicketsObj): TicketsObj {
-    let type = getTicketsType(aux);
-
+/**
+ * 
+ * @param ori the original (primary) version (Contains number and effor and assign to)
+ * @param sec the exported version directly from SNOW instance
+ * @returns 
+ */
+export function TicketsMerger(ori: TicketsObj, sec: TicketsObj): TicketsObj {
     let fin: TicketsObj = {
-        type: "UNDEFINED",
+        type: ori.type,
         name: "fin",
         event: new events.EventEmitter(),
         value: {
             data: {}
         }
-    }
+    };
+    let invalidTickets: string[];
+    Object.keys(ori.value.data).forEach((t) => {
+        if (sec.value.data.hasOwnProperty(t)) {
+            fin.value.data[t] = sec.value.data[t];
+            fin.value.data[t].effort = ori.value.data[t].effort;
+        } else {
+            fin.value.data[t] = ori.value.data[t];
+            invalidTickets.push(t.toString());
+        }
+    });
 
     return fin;
 }

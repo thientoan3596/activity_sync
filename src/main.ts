@@ -33,16 +33,17 @@ function main() {
         count: 0
     };
 
-    ParseCSVToTicket_V3(path.join(config.sampleDir, config.csvSample), inc);
-    inc.event.on("loaded", onSucessLoadTickets);
+    // ParseCSVToTicket_V3(path.join(config.sampleDir, config.csvSample), inc);
+    // inc.event.on("loaded", onSucessLoadTickets);
     // STATE.filesState.fin = "Loaded";
     // STATE.filesState.pri = "Loaded";
+
 }
 
 function onSucessLoadTickets(data: TicketsObj) {
 
     let STATE = State.getInstance();
-    STATE.filesState[data.name] = "Loaded";
+    STATE.filesState.input[data.name] = "Loaded";
     let isReady = true;
     Object.keys(STATE.filesState).every((file) => {
         if (STATE.filesState[file] == "Unloaded") {

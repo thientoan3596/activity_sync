@@ -1,6 +1,4 @@
 import { Configuration, State } from "./config/config.js";
-import path from 'path';
-import { ParseCSVToTicket_V3 } from "./models/Ticket.model.js";
 import * as events from "events";
 main();
 function main() {
@@ -25,10 +23,19 @@ function main() {
         event: new events.EventEmitter(),
         count: 0
     };
-    ParseCSVToTicket_V3(path.join(config.sampleDir, config.csvSample), inc);
-    inc.event.on("loaded", onSucessLoadTickets);
+    // ParseCSVToTicket_V3(path.join(config.sampleDir, config.csvSample), inc);
+    // inc.event.on("loaded", onSucessLoadTickets);
     // STATE.filesState.fin = "Loaded";
     // STATE.filesState.pri = "Loaded";
+    let temp = {
+        SC123: {
+            name: "Oke",
+        },
+        SC312: {
+            name: "IDK"
+        }
+    };
+    console.log(temp.hasOwnProperty("SC323"));
 }
 function onSucessLoadTickets(data) {
     let STATE = State.getInstance();
