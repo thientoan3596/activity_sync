@@ -4,6 +4,10 @@
   },
   "type": "module",
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "@types/node": "^18.11.18",
+    "typescript": "^5.0.0-dev.20221231"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0"
   }
 }

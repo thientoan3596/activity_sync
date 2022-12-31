@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2022-12-30 18:00:08">
+<incident action="INSERT_OR_UPDATE">
+<actions_taken/>
+<active>true</active>
+<activity_due/>
+<additional_assignee_list/>
+<approval>not requested</approval>
+<approval_history/>
+<approval_set/>
+<assigned_to display_value="Toan Luong">38b881888791d95c0b0e64e83cbb3579</assigned_to>
+<assignment_group display_value="Global ServiceNow DXC L2" name="Global ServiceNow DXC L2">42525ed2879d5d10a870dce83cbb3566</assignment_group>
+<business_duration/>
+<business_impact/>
+<business_service display_value=""/>
+<business_stc/>
+<calendar_duration/>
+<calendar_stc/>
+<caller_id display_value="Jan Kempe">92419e8cdb694410aa8b6d3405961991</caller_id>
+<category/>
+<cause/>
+<caused_by display_value=""/>
+<child_incidents>0</child_incidents>
+<close_code/>
+<close_notes/>
+<closed_at/>
+<closed_by display_value=""/>
+<cmdb_ci display_value=""/>
+<comments/>
+<comments_and_work_notes/>
+<company display_value=""/>
+<contact_type>self-service</contact_type>
+<correlation_display/>
+<correlation_id/>
+<delivery_plan display_value=""/>
+<delivery_task display_value=""/>
+<description>Hi DXC,
+
+wee need to create some new SLA which should apply to assigment group
+EA_Quadro_Support_ATOS SAP Authorization
+EA_Quadro_Support_ATOS SAP-Basis
+
+Nameing can be:
+EA_Quadro_ATOS_SLA_Px_response
+EA_Quadro_ATOS_SLA_Px_resolution
+
+General SLA active time: Monday - Friday 8:00 - 17:00 CET 
+SLA for response:
+p1: 30 Minutes
+p2: 90 min
+p3: 90 min
+p4/5: 1 business day
+
+SLA for resolution:
+P1: 4h
+P2: 88
+P3: 16h
+P4/5: 14 business days
+
+
+Please let me know if you have questions </description>
+<due_date/>
+<escalation>0</escalation>
+<expected_start/>
+<follow_up/>
+<group_list/>
+<hold_reason>5</hold_reason>
+<impact>3</impact>
+<incident_state>3</incident_state>
+<knowledge>false</knowledge>
+<lessons_learned/>
+<location display_value=""/>
+<made_sla>true</made_sla>
+<major_incident_state/>
+<notify>1</notify>
+<number>INC1438848</number>
+<opened_at>2022-11-10 15:36:33</opened_at>
+<opened_by display_value="Jan Kempe">92419e8cdb694410aa8b6d3405961991</opened_by>
+<order/>
+<origin_id/>
+<origin_table/>
+<overview/>
+<parent display_value=""/>
+<parent_incident display_value=""/>
+<priority>4</priority>
+<problem_id display_value=""/>
+<promoted_by display_value=""/>
+<promoted_on/>
+<proposed_by display_value=""/>
+<proposed_on/>
+<reassignment_count>0</reassignment_count>
+<rejection_goto display_value=""/>
+<reopen_count>0</reopen_count>
+<reopened_by display_value=""/>
+<reopened_time/>
+<resolved_at/>
+<resolved_by display_value=""/>
+<rfc display_value=""/>
+<route_reason/>
+<service_offering display_value=""/>
+<severity>3</severity>
+<short_description>Add SLAs</short_description>
+<sla_due/>
+<state>3</state>
+<subcategory/>
+<sys_class_name>incident</sys_class_name>
+<sys_created_by>jan.kempe@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-10 15:47:08</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>5ef3978687cb9590289b542bbbbb35af</sys_id>
+<sys_mod_count>18</sys_mod_count>
+<sys_updated_by>toan.luong.external@tkelevator.com</sys_updated_by>
+<sys_updated_on>2022-12-19 15:33:03</sys_updated_on>
+<task_effective_number>INC1438848</task_effective_number>
+<time_worked/>
+<timeline/>
+<trigger_rule display_value=""/>
+<u_business_area>TKE Group (BA ET)</u_business_area>
+<u_business_unit>BU EA</u_business_unit>
+<u_cancel_reason/>
+<u_category display_value="ServiceNow">a71ec6abdb74cc505be88a50399619fd</u_category>
+<u_country>DEU</u_country>
+<u_created_by_name>Jan Kempe</u_created_by_name>
+<u_dxc_number/>
+<u_dxc_sys_id/>
+<u_ext_reference/>
+<u_group_company_id>204200</u_group_company_id>
+<u_group_company_name>TK Elevator IaO GmbH</u_group_company_name>
+<u_itcm_number/>
+<u_itcm_retrigger_count>0</u_itcm_retrigger_count>
+<u_itcm_token/>
+<u_operations_unit>OU DACH</u_operations_unit>
+<u_ricoh_configuration_item display_value=""/>
+<u_ricoh_status/>
+<u_ricoh_sys_id/>
+<u_ricoh_ticket_no/>
+<u_subcategory display_value="Incident Management">fb4f0aebdb74cc505be88a5039961914</u_subcategory>
+<u_updated_by_name>Toan Luong</u_updated_by_name>
+<u_wipro_incident_number/>
+<u_wipro_transaction_id/>
+<universal_request display_value=""/>
+<upon_approval>proceed</upon_approval>
+<upon_reject>cancel</upon_reject>
+<urgency>2</urgency>
+<user_input/>
+<variables/>
+<watch_list/>
+<wf_activity display_value=""/>
+<work_end/>
+<work_notes/>
+<work_notes_list/>
+<work_start/>
+</incident>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>almudena.vera@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-19 08:32:31</sys_created_on>
+<sys_id>07e862ea87735114289b542bbbbb3554</sys_id>
+<u_created_by_name>ALMUDENA VERA</u_created_by_name>
+<value>@Toan Luong please, update this ticket. Thanks</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>jan.kempe@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-09 11:56:04</sys_created_on>
+<sys_id>1397371787239d90289b542bbbbb35bd</sys_id>
+<u_created_by_name>Jan Kempe</u_created_by_name>
+<value>For Incidents</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>jan.kempe@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-11 07:51:36</sys_created_on>
+<sys_id>152372da870f5d90289b542bbbbb3537</sys_id>
+<u_created_by_name>Jan Kempe</u_created_by_name>
+<value>Hi all,
+
+@ALMUDENA VERA would be good if we could implement this before the merge. Of course, if it has an big impact on the migration I can understand it, but if there is any chance please implement it.</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>jan.kempe@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-15 12:48:45</sys_created_on>
+<sys_id>193dfa55877f9590289b542bbbbb353c</sys_id>
+<u_created_by_name>Jan Kempe</u_created_by_name>
+<value>can be moved to prod</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>almudena.vera@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-07 10:03:53</sys_created_on>
+<sys_id>2cca0dfa872b1d50289b542bbbbb3597</sys_id>
+<u_created_by_name>ALMUDENA VERA</u_created_by_name>
+<value>Please, reactivate the implementation of this ticket @Toan Luong</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>son.nguyen.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-10 16:27:54</sys_created_on>
+<sys_id>56bf93068707d19006b9ed740cbb3578</sys_id>
+<u_created_by_name>Son Nguyen</u_created_by_name>
+<value>Hi @Toan Luong,
+
+I think this case should do after merging has been completed because it's not something urgent or hotfix that makes postpone to user's work and it also takes time to do it obviously. Therefore, I think you can suggest Almudena to on-hold this one.
+
+Regards.</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-19 15:33:03</sys_created_on>
+<sys_id>572904fe87b3d114289b542bbbbb35da</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi all,
+
+Sorry for the late response.
+Conflict has been resolved and the changes have been committed on PROD.
+Kindly check and confirm,
+BRs,
+Toan Luong</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-07 10:31:20</sys_created_on>
+<sys_id>6e011db287eb1d50289b542bbbbb3551</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>HI @Jan Kempe,
+
+Could you please let me know if these SLAs will be applied for Incident or SCTASK?
+
+BRs,
+Toan Luong</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-16 10:44:04</sys_created_on>
+<sys_id>949a41088757d154289b542bbbbb355b</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi all, 
+Per Agreement on Monday meeting, this ticket will be postponed till the Merge completed. 
+Since SLA is highly sensitive and need to be done carefully.
+
+BRs,
+Toan Luong</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>son.nguyen.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-19 10:53:31</sys_created_on>
+<sys_id>9c390baa873f5114289b542bbbbb359f</sys_id>
+<u_created_by_name>Son Nguyen</u_created_by_name>
+<value>Hi All,
+
+Waiting for Toan to move the update set to the PROD environment. This can't be done without his confirmation about the update set.
+
+Regards.</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-13 10:54:23</sys_created_on>
+<sys_id>a6df40f487b3115006b9ed740cbb3571</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @Jan Kempe,
+Any update?</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>hung.pham.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-19 11:00:55</sys_created_on>
+<sys_id>acea4fa6877b19d006b9ed740cbb351b</sys_id>
+<u_created_by_name>Hung Pham</u_created_by_name>
+<value>Hi All,
+There are some conflictions when move to PROD. Toan will check and fix it today.
+Regards!</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-10 18:00:07</sys_created_on>
+<sys_id>c5d4ffce87c7d590289b542bbbbb35b9</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @Jan Kempe,
+We are communicating with Almudena on how and when to proceed this.</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-08 11:37:44</sys_created_on>
+<sys_id>cdd9e283872b5590289b542bbbbb352a</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @Jan Kempe,
+
+Any update?</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-08 20:01:22</sys_created_on>
+<sys_id>d61d101787631990289b542bbbbb35a1</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @Jan Kempe,
+Any update?</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-10 17:11:17</sys_created_on>
+<sys_id>f9a92b0687c3d590289b542bbbbb3541</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @ALMUDENA VERA,
+
+What do think about delaying this ticket after the merge?
+
+BRs,
+Toan Luong</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>5ef3978687cb9590289b542bbbbb35af</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-12-11 11:18:07</sys_created_on>
+<sys_id>fe12c28c87f39110289b542bbbbb35bf</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @Jan Kempe,
+
+This has been applied on test01.
+
+Kindly help to check.
+Unit testing is being conducted, and have not found any issue so far.
+
+BRs,
+Toan Luong</value>
+</sys_journal_field>
+<incident action="INSERT_OR_UPDATE">
+<actions_taken/>
+<active>true</active>
+<activity_due/>
+<additional_assignee_list/>
+<approval>not requested</approval>
+<approval_history/>
+<approval_set/>
+<assigned_to display_value="Toan Luong">38b881888791d95c0b0e64e83cbb3579</assigned_to>
+<assignment_group display_value="Global ServiceNow DXC L2" name="Global ServiceNow DXC L2">42525ed2879d5d10a870dce83cbb3566</assignment_group>
+<business_duration>1970-01-08 00:00:00</business_duration>
+<business_impact/>
+<business_service display_value=""/>
+<business_stc>604800</business_stc>
+<calendar_duration>1970-01-29 20:25:26</calendar_duration>
+<calendar_stc>2492726</calendar_stc>
+<caller_id display_value="ALMUDENA VERA">d65e7f2d87967850e10840890cbb35dc</caller_id>
+<category/>
+<cause/>
+<caused_by display_value=""/>
+<child_incidents>0</child_incidents>
+<close_code/>
+<close_notes/>
+<closed_at/>
+<closed_by display_value=""/>
+<cmdb_ci display_value=""/>
+<comments/>
+<comments_and_work_notes/>
+<company display_value=""/>
+<contact_type>self-service</contact_type>
+<correlation_display/>
+<correlation_id/>
+<delivery_plan display_value=""/>
+<delivery_task display_value=""/>
+<description>Hello
+See some errors we are observing:
+
+1) EGHRIS Inbound email action. Duplicate  incidents getting created. It think we have a conflict:
+INC1413883-INC1413882 Opened today, so the issue is happening still now
+INC1412735-INC1412736
+INC1412438-INC1412437
+
+2) ATS Inbound action. INC1402948 not assigned to EA Germany ATS Support L2
+
+3) Please, check if there is any configuration related to ITVT. Emails sent from support@itvt.de
+INC1402958
+INC1402954
+INC1402946
+
+5) BBNI duplicate incidents
+INC1402896-INC1402895 BBNI LUX
+INC1402890-INC1402889 BBNI ITA
+INC1402887-INC1402886 BBNI ITA
+INC1404936-INC1404935-INC1404933-INC1404932 BBNI ITA
+INC1404879-INC1404878 BBNI ITA
+
+5) Check if any logic for emails sent from systems.elevator.plant.de@tkelevator.com refer to INC1402849
+
+6) OU Korea and OU ANZ
+For OU Korea INC1402839 &amp; INC1402836
+For OU ANZ INC1402817-INC1402816
+
+3) DACH
+ INC1402924- INC1402923 duplicated DACH
+INC1402910- INC1402909 duplicated DACH 
+INC1402856- INC1402855 duplicated DACH</description>
+<due_date/>
+<escalation>0</escalation>
+<expected_start/>
+<follow_up/>
+<group_list/>
+<hold_reason>1</hold_reason>
+<impact>2</impact>
+<incident_state>3</incident_state>
+<knowledge>false</knowledge>
+<lessons_learned/>
+<location display_value=""/>
+<made_sla>true</made_sla>
+<major_incident_state/>
+<notify>1</notify>
+<number>INC1414434</number>
+<opened_at>2022-10-18 14:13:54</opened_at>
+<opened_by display_value="ALMUDENA VERA">d65e7f2d87967850e10840890cbb35dc</opened_by>
+<order/>
+<origin_id/>
+<origin_table/>
+<overview/>
+<parent display_value=""/>
+<parent_incident display_value=""/>
+<priority>4</priority>
+<problem_id display_value=""/>
+<promoted_by display_value=""/>
+<promoted_on/>
+<proposed_by display_value=""/>
+<proposed_on/>
+<reassignment_count>0</reassignment_count>
+<rejection_goto display_value=""/>
+<reopen_count>1</reopen_count>
+<reopened_by display_value="Toan Luong">38b881888791d95c0b0e64e83cbb3579</reopened_by>
+<reopened_time>2022-11-16 11:12:58</reopened_time>
+<resolved_at/>
+<resolved_by display_value=""/>
+<rfc display_value=""/>
+<route_reason/>
+<service_offering display_value=""/>
+<severity>3</severity>
+<short_description>Inbound email action || Multiple errors, incidents duplicated</short_description>
+<sla_due/>
+<state>3</state>
+<subcategory/>
+<sys_class_name>incident</sys_class_name>
+<sys_created_by>almudena.vera@tkelevator.com</sys_created_by>
+<sys_created_on>2022-10-18 15:44:09</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>8774e43e8726d5d8c3e41fc73cbb3503</sys_id>
+<sys_mod_count>7</sys_mod_count>
+<sys_updated_by>toan.luong.external@tkelevator.com</sys_updated_by>
+<sys_updated_on>2022-11-16 11:12:58</sys_updated_on>
+<task_effective_number>INC1414434</task_effective_number>
+<time_worked/>
+<timeline/>
+<trigger_rule display_value=""/>
+<u_business_area>Elevator Technology</u_business_area>
+<u_business_unit>BU EA</u_business_unit>
+<u_cancel_reason/>
+<u_category display_value="ServiceNow">a71ec6abdb74cc505be88a50399619fd</u_category>
+<u_country>ESP</u_country>
+<u_created_by_name>ALMUDENA VERA</u_created_by_name>
+<u_dxc_number/>
+<u_dxc_sys_id/>
+<u_ext_reference/>
+<u_group_company_id>800696</u_group_company_id>
+<u_group_company_name>TK Elevator Iberica Holding S L U</u_group_company_name>
+<u_itcm_number/>
+<u_itcm_retrigger_count>0</u_itcm_retrigger_count>
+<u_itcm_token/>
+<u_operations_unit>OU Iberia</u_operations_unit>
+<u_ricoh_configuration_item display_value=""/>
+<u_ricoh_status/>
+<u_ricoh_sys_id/>
+<u_ricoh_ticket_no/>
+<u_subcategory display_value="Incident Management">fb4f0aebdb74cc505be88a5039961914</u_subcategory>
+<u_updated_by_name>Toan Luong</u_updated_by_name>
+<u_wipro_incident_number/>
+<u_wipro_transaction_id/>
+<universal_request display_value=""/>
+<upon_approval>proceed</upon_approval>
+<upon_reject>cancel</upon_reject>
+<urgency>3</urgency>
+<user_input/>
+<variables/>
+<watch_list/>
+<wf_activity display_value=""/>
+<work_end/>
+<work_notes/>
+<work_notes_list/>
+<work_start/>
+</incident>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>work_notes</element>
+<element_id>8774e43e8726d5d8c3e41fc73cbb3503</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-01 18:16:21</sys_created_on>
+<sys_id>1732ad9787be19d0289b542bbbbb3536</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @ALMUDENA VERA,
+Any update?</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>8774e43e8726d5d8c3e41fc73cbb3503</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-11-16 11:12:58</sys_created_on>
+<sys_id>3b21d140871bd154289b542bbbbb3511</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Awaiting for next step.</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>8774e43e8726d5d8c3e41fc73cbb3503</element_id>
+<name>incident</name>
+<sys_created_by>toan.luong.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-10-26 19:26:24</sys_created_on>
+<sys_id>4bb87e1187fa9d10289b542bbbbb3517</sys_id>
+<u_created_by_name>Toan Luong</u_created_by_name>
+<value>Hi @ALMUDENA VERA,
+Any update on this?</value>
+</sys_journal_field>
+<sys_journal_field action="INSERT_OR_UPDATE">
+<element>comments</element>
+<element_id>8774e43e8726d5d8c3e41fc73cbb3503</element_id>
+<name>incident</name>
+<sys_created_by>son.nguyen.external@tkelevator.com</sys_created_by>
+<sys_created_on>2022-10-20 08:22:28</sys_created_on>
+<sys_id>b6376d1b87aad59c0b0e64e83cbb3562</sys_id>
+<u_created_by_name>Son Nguyen</u_created_by_name>
+<value>1) EGHRIS Inbound email action. Duplicate incidents getting created. It think we have a conflict:
+INC1413883-INC1413882 Opened today, so the issue is happening still now
+INC1412735-INC1412736
+INC1412438-INC1412437
+=&gt; Configure incorrect for Spain 271900(1), will have to exclude BBNI(2), reply email =&gt; duplicate (2)
+
+2) ATS Inbound action. INC1402948 not assigned to EA Germany ATS Support L2
+=&gt; This has been conflicted before the last version of ICS go live, will monitor ATS in the future(incident created on 7/10 at 3 am, old version ICS go live 6/10 meanwhile the latest version go live 7/10 at 5 am)
+
+3) Please, check if there is any configuration related to ITVT. Emails sent from support@itvt.de
+INC1402958
+INC1402954
+INC1402946
+=&gt; Inbound ICS control old version runs before Son's update set has been moved
+
+5) BBNI duplicate incidents
+INC1402896-INC1402895 BBNI LUX
+INC1402890-INC1402889 BBNI ITA
+INC1402887-INC1402886 BBNI ITA
+=&gt; ICS control old version conflict with GCID(in this case GCID worked fine, ICS old version has the problem)
+
+INC1404936-INC1404935-INC1404933-INC1404932 BBNI ITA
+INC1404879-INC1404878 BBNI ITA
+=&gt; Conflict between Create incident &amp; GCID(will fix it in the update set INC1415282)
+
+
+5) Check if any logic for emails sent from systems.elevator.plant.de@tkelevator.com refer to INC1402849
+=&gt; Conflict with ICS control before Son's update set has been moved
+
+6) OU Korea and OU ANZ
+For OU Korea INC1402839 &amp; INC1402836
+For OU ANZ INC1402817-INC1402816
+=&gt; ICS control old version
+
+7) DACH
+ INC1402924- INC1402923 duplicated DACH
+INC1402910- INC1402909 duplicated DACH 
+INC1402856- INC1402855 duplicated DACH
+=&gt; Create incident conflict with ICS control old version
+
+Please help to test(maybe you can request anyone to send an email to test01) and verify if the conflict still happens or not.
+
+Regards.</value>
+</sys_journal_field>
+</unload>
