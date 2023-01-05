@@ -1,6 +1,14 @@
 
 import { FileState } from "../index.js";
 export class Configuration {
+    dir = "./dist/data";
+
+
+
+    test_dir = "./dist/data/test";
+    test_priFile = "activity_sheet_short.xlsx";
+    test_auxFile_inc = "incident_test_short.csv";
+    test_auxFile_sctask = "sc_task_test_short.csv"
     primaryFile = "activity_sheet.xlsx";
     auxFile = "downloaded.xlsx";
     exportFile = "final.xlsx";

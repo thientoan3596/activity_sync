@@ -16,13 +16,33 @@ export declare type TicketCSV = {
     opened_by: string;
     ritm: string;
 }
+export type TicketsMixedObj = {
+    name?: "aux" | "pri" | "fin";
+    type: TicketType;
+    value?: { inc: any[], sctask: any[] };
+    event: EventEmitter;
+    count?: number;
+
+}
 export type TicketsObj = {
     name?: "aux" | "pri" | "fin";
     type: TicketType;
-    value: { data: {} };
+    value?: { data: {} };
     event: EventEmitter;
     count?: number;
 }
 export type FileState = "Unloaded" | "Loaded";
 
-export type TicketType = "SCTASK" | "INCIDENT" | "MIX" | "UNDEFINED"
+export type TicketType = "SCTASK" | "INCIDENT" | "MIX" | "UNDEFINED";
+export type CLI_Args = {
+    mode: "strict" | "normal" | undefined;
+    run_type: "dev" | "prod" | undefined;
+}
+/**
+ * Docs
+ */
+
+export type SCTask_and_INC = {
+    sctask: unknown[],
+    incident: unknown[],
+}

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "tsc && node ./dist/main.js"
+    "test": "tsc && node ./dist/main.js run_type=dev mode=strict"
   },
   "type": "module",
   "devDependencies": {
@@ -8,6 +8,7 @@
     "typescript": "^5.0.0-dev.20221231"
   },
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv-parser": "^3.0.0",
+    "xlsx": "^0.18.5"
   }
 }
