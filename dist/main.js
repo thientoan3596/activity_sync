@@ -21,45 +21,40 @@ function main() {
     /**
      * Instanciate Singletons
      */
-    init();
-    console.log(App.STATE);
-    STATE = State.getInstance();
-    let config = Configuration.getInstance();
-    CONFIG = Configuration.getInstance();
-    let inc;
-    INC = inc;
-    let inc_aux_path;
-    // let workbook: XLSX.WorkBook;
-    // WORKBOOK = workbook;
-    let priData = {
-        name: "pri",
-        type: "MIX",
-        event: new events.EventEmitter(),
-    };
-    priData.event.on('loaded', () => console.log("loaded"));
-    let priSCTask, priInc;
-    if (cli_args.run_type == "dev") {
-        INC = {
-            name: "aux",
-            type: "INCIDENT",
-            value: { data: {} },
-            event: new events.EventEmitter(),
-        };
-        inc_aux_path = path.join(config.test_dir, config.test_auxFile_inc);
-        ParseCSVToTicket_V3(inc_aux_path, INC);
-        priData.event.on("loaded", onSucessLoadTickets);
-        INC.event.on("loaded", onSucessLoadTickets);
-        /**
-         * Load fileto Workbook;
-         */
-        WORKBOOK = XLSX.read(fs.readFileSync(path.join(config.test_dir, config.test_priFile)));
-        ({ sctask: priSCTask, incident: INCTemp } = ParseXLXSToTicket(WORKBOOK, priData));
-    }
-    // Create Incidents  Processer
+    init(cli_args);
     /**
-     * ticket event register
+     * @type {{aux:{inc:fs.PathLike,sctask:fs.PathLike},pri:fs.PathLike}}
      */
+    let src;
+    if (App.ENV.toString().toLowerCase() === "dev") {
+        src = {};
+        src.aux = {};
+        src.aux.inc = path.join(App.CONF.test_dir, App.CONF.test_auxFile_inc);
+        src.pri = path.join(App.CONF.test_dir, App.CONF.test_priFile);
+    }
+    else if (App.ENV.toString().toLocaleLowerCase() == "prod") {
+        throw new Error("PROD ENV is not ready!");
+    }
+    else {
+        throw new Error(`Invalid env ->${App.ENV}`);
+    }
+    /**
+     * Load CSV
+     */
+    ParseCSVToTicket_V3(src.aux.inc, App.TicketData.inc);
+    App.XLSX.input = XLSX.read(fs.readFileSync(src.pri));
+    let temp;
+    ({ sctask: temp, incident: INCTemp } = ParseXLXSToTicket(App.XLSX.input, App.TicketData.input));
 }
+/**
+ * Function for TicketsObj>event
+ *
+ * Set the file state to be loaded
+ *
+ * Once all required file are loaded, fire the @function {run}
+ *
+ * @param data
+ */
 function onSucessLoadTickets(data) {
     let STATE = State.getInstance();
     STATE.filesState.input[data.name] = "Loaded";
@@ -77,8 +72,29 @@ function onSucessLoadTickets(data) {
 /**
  * Initialize App
  */
-function init() {
-    App = {};
-    App.STATE = State.getInstance();
-    App.CONF = Configuration.getInstance();
+function init(args) {
+    App = {
+        STATE: State.getInstance(),
+        CONF: Configuration.getInstance(),
+        MODE: args.mode || "normal",
+        ENV: args.env || "dev",
+        TicketData: {
+            inc: {
+                name: "aux",
+                type: "INCIDENT",
+                value: { data: {} },
+                event: new events.EventEmitter(),
+            },
+            input: {
+                name: "pri",
+                type: "MIX",
+                event: new events.EventEmitter(),
+            }
+        },
+        XLSX: {
+            input: undefined,
+        },
+    };
+    App.TicketData.input.event.once("loaded", onSucessLoadTickets);
+    App.TicketData.inc.event.once("loaded", onSucessLoadTickets);
 }

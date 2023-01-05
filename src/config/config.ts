@@ -15,6 +15,7 @@ export class Configuration {
     xmlSample = "incident.xml";
     sampleDir = "./dist/data/sample";
     csvSample = "incident.csv";
+    output = "output.xlsx";
     readonly validate_priority = [1, 2, 3, 4, 5];
     private static INSTANCE: Configuration;
     private constructor() {

@@ -1,4 +1,5 @@
 import { EventEmitter } from "stream";
+import { Configuration } from "./config/config";
 
 export declare type TicketCSV = {
     number: string;
@@ -36,7 +37,7 @@ export type FileState = "Unloaded" | "Loaded";
 export type TicketType = "SCTASK" | "INCIDENT" | "MIX" | "UNDEFINED";
 export type CLI_Args = {
     mode: "strict" | "normal" | undefined;
-    run_type: "dev" | "prod" | undefined;
+    env: "dev" | "prod" | undefined;
 }
 /**
  * Docs
@@ -45,4 +46,18 @@ export type CLI_Args = {
 export type SCTask_and_INC = {
     sctask: unknown[],
     incident: unknown[],
+}
+export type Application = {
+    CONF?: Configuration,
+    STATE?: State,
+    ENV?: string,
+    MODE?: string,
+    TicketData?: {
+        inc?: TicketsObj,
+        input?: TicketsMixedObj
+    }
+    XLSX?: {
+        input?: XLSX.WorkBook,
+        output?: XLSX.WorkBook,
+    }
 }

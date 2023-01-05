@@ -8,13 +8,13 @@ export function GetArgs(agrs_string: string[]): CLI_Args {
     let mode = args.find(a => a.includes("mode"));
     mode = mode == undefined ? undefined : mode.replace("mode=", "") || undefined as CLI_Args["mode"];
 
-    let run_type = args.find(a => a.includes("run_type"));
-    run_type = run_type == undefined ? undefined : run_type.replace("run_type=", "") || undefined;
+    let env = args.find(a => a.includes("env"));
+    env = env == undefined ? undefined : env.replace("run_type=", "") || undefined;
     // console.log(args.indexOf("mode"));
     // console.log(run_type);
     let cliArgs = {
         mode,
-        run_type
+        env
     } as CLI_Args;
 
     return cliArgs;

@@ -35,7 +35,8 @@ export function ParseCSVToTicket_V2(filePath, eventHandler) {
     });
 }
 /**
- *
+ * Parsing csv from filePath to ticketHodler - async func
+ * When data is parsed, emit "loaded" on ticketHolder.event
  * @param filePath
  * @param ticketHolder
  */
@@ -52,10 +53,7 @@ export function ParseCSVToTicket_V3(filePath, ticketHolder) {
             ticketHolder.count++;
         });
         parser.on("end", () => {
-            console.log("______");
-            console.log("CSV");
-            console.log(ticketHolder.value.data);
-            console.log("_______");
+            console.log(`CSV: Loaded ${ticketHolder.count} row(s)`);
             ticketHolder.event.emit("loaded", ticketHolder);
         });
     }
@@ -158,10 +156,7 @@ export function ParseXLXSToTicket(workbook, ticketHolder) {
     ticketHolder.value.inc = incTicket;
     ticketHolder.value.sctask = scTask;
     ticketHolder.count = incTicket.length + scTask.length;
+    console.log(`XLSX: Loaded ${incTicket.length} row(s)`);
     ticketHolder.event.emit("loaded", ticketHolder);
-    console.log("_______");
-    console.log("XLSX");
-    console.log(incTicket);
-    console.log("_______");
     return { sctask: scTask, incident: incTicket };
 }

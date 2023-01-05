@@ -4,13 +4,13 @@ export function GetArgs(agrs_string) {
     console.log(args);
     let mode = args.find(a => a.includes("mode"));
     mode = mode == undefined ? undefined : mode.replace("mode=", "") || undefined;
-    let run_type = args.find(a => a.includes("run_type"));
-    run_type = run_type == undefined ? undefined : run_type.replace("run_type=", "") || undefined;
+    let env = args.find(a => a.includes("env"));
+    env = env == undefined ? undefined : env.replace("run_type=", "") || undefined;
     // console.log(args.indexOf("mode"));
     // console.log(run_type);
     let cliArgs = {
         mode,
-        run_type
+        env
     };
     return cliArgs;
 }
