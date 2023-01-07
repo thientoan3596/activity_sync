@@ -10,6 +10,7 @@ export class Configuration {
     xmlSample = "incident.xml";
     sampleDir = "./dist/data/sample";
     csvSample = "incident.csv";
+    output = "output.xlsx";
     validate_priority = [1, 2, 3, 4, 5];
     static INSTANCE;
     constructor() {

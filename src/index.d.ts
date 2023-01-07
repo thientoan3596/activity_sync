@@ -15,7 +15,7 @@ export declare type TicketCSV = {
     effort: number;
     caller: string;
     opened_by: string;
-    ritm: string;
+    ritm?: string;
 }
 export type TicketsMixedObj = {
     name?: "aux" | "pri" | "fin";
@@ -29,6 +29,13 @@ export type TicketsObj = {
     name?: "aux" | "pri" | "fin";
     type: TicketType;
     value?: { data: {} };
+    event: EventEmitter;
+    count?: number;
+}
+export type TicketsObj_2 = {
+    name?: "aux" | "pri" | "fin";
+    type: TicketType;
+    value?: { data: any[] };
     event: EventEmitter;
     count?: number;
 }
@@ -54,10 +61,15 @@ export type Application = {
     MODE?: string,
     TicketData?: {
         inc?: TicketsObj,
-        input?: TicketsMixedObj
+        input?: TicketsMixedObj,
+        output?: {
+            inc?: TicketsObj_2,
+            sctask?: TicketsObj_2
+        },
     }
     XLSX?: {
         input?: XLSX.WorkBook,
         output?: XLSX.WorkBook,
     }
+    _data?: any[]
 }

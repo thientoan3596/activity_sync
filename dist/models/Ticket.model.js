@@ -53,7 +53,6 @@ export function ParseCSVToTicket_V3(filePath, ticketHolder) {
             ticketHolder.count++;
         });
         parser.on("end", () => {
-            console.log(`CSV: Loaded ${ticketHolder.count} row(s)`);
             ticketHolder.event.emit("loaded", ticketHolder);
         });
     }
@@ -124,31 +123,17 @@ function getTicketsType(tickets) {
  */
 export function ParseXLXSToTicket(workbook, ticketHolder) {
     let sheetNames = workbook.SheetNames;
-    if (sheetNames.length < 3) {
-        throw new Error(`Incorrect workbook(file): received only ${sheetNames.length} sheet(s)| ${sheetNames}`);
-    }
-    let incSheet = {
-        name: "",
-        exist: false
-    }, sctaskSheet = {
-        name: "",
-        exist: false,
-    };
+    let incSheet = "", sctaskSheet = "";
     sheetNames.forEach((name) => {
         if (name.match(/inc/i)) {
-            incSheet.name = name;
-            incSheet.exist = true;
+            incSheet = name;
         }
         if (name.match(/service request/i)) {
-            sctaskSheet.name = name;
-            sctaskSheet.exist = true;
+            sctaskSheet = name;
         }
     });
-    if (!sctaskSheet.exist || !incSheet.exist) {
-        throw new Error(`Workbook does not contain required sheet(s)\nWorkbook contains:${sheetNames}\nRequires: <Incident> & <Service Request>`);
-    }
-    let scTask = XLSX.utils.sheet_to_json(workbook.Sheets[sctaskSheet.name], { defval: "" });
-    let incTicket = XLSX.utils.sheet_to_json(workbook.Sheets[incSheet.name], { defval: "" });
+    let scTask = XLSX.utils.sheet_to_json(workbook.Sheets[sctaskSheet], { defval: "" });
+    let incTicket = XLSX.utils.sheet_to_json(workbook.Sheets[incSheet], { defval: "" });
     ticketHolder.value = {
         inc: [],
         sctask: [],
@@ -156,7 +141,7 @@ export function ParseXLXSToTicket(workbook, ticketHolder) {
     ticketHolder.value.inc = incTicket;
     ticketHolder.value.sctask = scTask;
     ticketHolder.count = incTicket.length + scTask.length;
-    console.log(`XLSX: Loaded ${incTicket.length} row(s)`);
+    // console.log(`XLSX: Loaded ${incTicket.length} row(s)`);
     ticketHolder.event.emit("loaded", ticketHolder);
     return { sctask: scTask, incident: incTicket };
 }

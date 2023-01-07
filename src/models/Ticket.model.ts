@@ -54,7 +54,6 @@ export function ParseCSVToTicket_V3(filePath: string, ticketHolder: TicketsObj) 
             ticketHolder.count++;
         });
         parser.on("end", () => {
-            console.log(`CSV: Loaded ${ticketHolder.count} row(s)`);
             ticketHolder.event.emit("loaded", ticketHolder);
         });
     } else
@@ -147,7 +146,7 @@ export function ParseXLXSToTicket(workbook: XLSX.WorkBook, ticketHolder: Tickets
     ticketHolder.value.sctask = scTask;
     ticketHolder.count = incTicket.length + scTask.length;
 
-    console.log(`XLSX: Loaded ${incTicket.length} row(s)`);
+    // console.log(`XLSX: Loaded ${incTicket.length} row(s)`);
 
     ticketHolder.event.emit("loaded", ticketHolder);
     return { sctask: scTask, incident: incTicket };
